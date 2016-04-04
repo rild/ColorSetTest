@@ -18,43 +18,49 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="select your color"
-        android:textStyle="bold"/>
+        android:text="select your color" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="10dp" />
 
+    <include layout="@layout/button_light" />
+
+    <include layout="@layout/button_dark" />
+
+    <include layout="@layout/button_vivid" />
+
     <Button
         android:id="@+id/black_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         android:background="@color/bg_black"
         android:text="black"
-        android:textStyle="bold"
-        android:layout_margin="4dp"
-        android:textColor="@color/inverse_text" />
+        android:textColor="@color/inverse_text_color"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/blue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         android:background="@color/bg_blue"
         android:text="blue"
-        android:textStyle="bold"
-        android:layout_margin="4dp"
-        android:textColor="@color/inverse_text" />
+        android:textColor="@color/inverse_text_color"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/red_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         android:background="@color/bg_red"
         android:text="red"
-        android:textStyle="bold"
-        android:layout_margin="4dp"
-        android:textColor="@color/inverse_text" />
+        android:textColor="@color/inverse_text_color"
+        android:textStyle="bold" />
 </LinearLayout>
