@@ -5,25 +5,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 public class SubActivity extends AppCompatActivity {
-    private final int STATE_BLACK = 0;
-    private final int STATE_BLUE = 1;
-    private final int STATE_RED = 2;
+    private final int STATE_LIGHT = 0;
+    private final int STATE_DARK = 1;
+    private final int STATE_VIVID = 2;
 
     int mColorState;
 
     TextView mCurrentColor;
 
-    Button mBlackButton;
-    Button mBlueButton;
-    Button mRedButton;
+    FrameLayout mBlackButton;
+    FrameLayout mBlueButton;
+    FrameLayout mRedButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
+
         loadIntentInfo();
 
         mCurrentColor = (TextView) findViewById(R.id.current_color_textview);
@@ -31,9 +33,9 @@ public class SubActivity extends AppCompatActivity {
         updateColorInfo(mColorState);
 
         //ボタンの設定
-        mBlackButton = (Button) findViewById(R.id.black_button);
-        mBlueButton = (Button) findViewById(R.id.blue_button);
-        mRedButton = (Button) findViewById(R.id.red_button);
+        mBlackButton = (FrameLayout) findViewById(R.id.light_button);
+        mBlueButton = (FrameLayout) findViewById(R.id.dark_button);
+        mRedButton = (FrameLayout) findViewById(R.id.vivid_button);
         setOnClickToButtons(); //長いからメソッド化
 
     }
@@ -41,7 +43,7 @@ public class SubActivity extends AppCompatActivity {
     private void loadIntentInfo() {
         //色の情報をintentから受け取る
         Intent intent = getIntent();
-        mColorState = intent.getIntExtra("current_color", STATE_BLACK);
+        mColorState = intent.getIntExtra("current_color", STATE_LIGHT);
     }
 
     private void intentMain(int colorState) {
@@ -52,11 +54,11 @@ public class SubActivity extends AppCompatActivity {
 
     private void updateColorInfo(int color) {
 
-        if (color == STATE_BLACK) {
+        if (color == STATE_LIGHT) {
             mCurrentColor.setText("現在の色は 黒 色です");
-        } else if (color == STATE_BLUE) {
+        } else if (color == STATE_DARK) {
             mCurrentColor.setText("現在の色は 青 色です");
-        } else if (color == STATE_RED) {
+        } else if (color == STATE_VIVID) {
             mCurrentColor.setText("現在の色は 赤 色です");
         }
     }
@@ -65,21 +67,21 @@ public class SubActivity extends AppCompatActivity {
         mBlackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mColorState = STATE_BLACK;
+                mColorState = STATE_LIGHT;
                 intentMain(mColorState);
             }
         });
         mBlueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mColorState = STATE_BLUE;
+                mColorState = STATE_DARK;
                 intentMain(mColorState);
             }
         });
         mRedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mColorState = STATE_RED;
+                mColorState = STATE_VIVID;
                 intentMain(mColorState);
             }
         });
