@@ -3,22 +3,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="4dp"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
+    android:padding="4dp"
     tools:context="rimp.rild.com.android.colorsettest.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_scheme_dark_color_0"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/main_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_scheme_accent_color_0"
+            android:gravity="center"
+            android:text="Sample Text"
+            android:textStyle="bold"
+            android:textColor="@color/color_scheme_base_color_0" />
+
+        <TextView
+            android:id="@+id/main_text_upper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_scheme_light_color_0"
+            android:gravity="center"
+            android:text="Sample Text"
+            android:textColor="@color/color_scheme_nomal_color_0"
+            android:textSize="@dimen/main_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/main_text_lower"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_scheme_nomal_color_0"
+            android:gravity="center"
+            android:text="Sample Text"
+            android:textColor="@color/color_scheme_light_color_0"
+            android:textSize="@dimen/main_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/main_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp" />
+
     <Button
         android:id="@+id/intent_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="change color"/>
+        android:text="change color" />
 </LinearLayout>
