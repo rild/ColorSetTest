@@ -6,9 +6,30 @@
     <color name="bg_red">#FF4081</color>
 
     <!--TextView background color-->
-    <color name="inverse_text">#fdfdfd</color>
+    <color name="inverse_text_color">#fdfdfd</color>
+    <color name="inverse_text_color_dark">#ededed</color>
+    <color name="primary_text_color">#D8E2DC</color>
 
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="color_scheme_base_color_0">#FDFDFD</color>
+    <color name="color_scheme_light_color_0">#FFA69E</color>
+    <color name="color_scheme_nomal_color_0">#A5FFD6</color>
+    <color name="color_scheme_dark_color_0">#84DCC6</color>
+    <color name="color_scheme_accent_color_0">#FF686B</color>
+
+    <color name="color_scheme_base_color_1">#F1FAEE</color>
+    <color name="color_scheme_light_color_1">#A8DADC</color>
+    <color name="color_scheme_nomal_color_1">#457B9D</color>
+    <color name="color_scheme_dark_color_1">#1D3557</color>
+    <color name="color_scheme_accent_color_1">#E63946</color>
+
+    <color name="color_scheme_base_color_2">#FDFFFC</color>
+    <color name="color_scheme_light_color_2">#FF9F1C</color>
+    <color name="color_scheme_nomal_color_2">#2EC4B6</color>
+    <color name="color_scheme_dark_color_2">#011627</color>
+    <color name="color_scheme_accent_color_2">#E71D36</color>
+
 </resources>
